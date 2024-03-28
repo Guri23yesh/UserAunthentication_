@@ -15,6 +15,8 @@ import router from './routes/routes.js'
 import {} from 'dotenv/config'
 
 
+
+
 const uri= process.env.MONGO_URI
 //const uri = "mongodb+srv://cangurleen000:KX1KlILIcdTeyhbu@cluster0.0vgibrb.mongodb.net/driveCenter?retryWrites=true&w=majority"
 
@@ -41,14 +43,10 @@ app.set('view-engine','ejs')
 
 app.use(express.static('public'))
 
-const PORT = process.env.PORT || 8080
-
-
-
-app.listen(9091,()=>{
-
-    console.log(`App is lietning at port ${PORT} !!!!!!!!`)
-})
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+    console.log(`Server is listening on port ${PORT}`);
+});
 
 // app.get('/home',(req,res)=>{
 
